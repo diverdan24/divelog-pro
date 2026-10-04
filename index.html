@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070a08">
+<title>DiveLog Pro</title>
+<style>
+:root{--bg:#070a08;--card:#111611;--card2:#171e17;--green:#b8ff00;--orange:#ff7900;--text:#f5f7f3;--muted:#8d978e;--line:#2a332b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{padding-bottom:90px}input,select,button{font:inherit}input,select{width:100%;font-size:16px!important;padding:13px;border-radius:12px;border:1px solid var(--line);background:#0b100c;color:var(--text)}
+button{cursor:pointer;border:0}.app{max-width:760px;margin:auto;padding:18px}
+header{display:flex;align-items:center;gap:11px;margin-bottom:18px}.logo{width:43px;height:43px;border:2px solid var(--green);border-radius:12px;display:grid;place-items:center;color:var(--green);font-weight:900}.title{font-size:24px;font-weight:900}.sub{font-size:12px;color:var(--muted)}
+.page{display:none}.page.active{display:block}
+.hero,.card,.item{background:var(--card);border:1px solid var(--line);border-radius:18px}.hero{padding:18px;margin-bottom:12px}.eyebrow{color:var(--green);font-size:11px;font-weight:900;letter-spacing:1px}.hero h1{font-size:30px;margin:7px 0 4px}.hero p{color:var(--muted);margin:0}
+.rat{margin-top:17px;padding:12px;border-radius:15px;background:#090d0a;display:flex;align-items:center;gap:12px}.rat svg{width:82px;height:82px;flex:none}.rat strong{display:block;color:var(--orange)}.rat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{padding:14px}.label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}.value{font-size:25px;font-weight:900;margin-top:5px}.green{color:var(--green)}.orange{color:var(--orange)}.bar{height:6px;background:#252d25;border-radius:10px;margin-top:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--green);width:0}
+.heading{display:flex;justify-content:space-between;align-items:center;margin:20px 2px 9px}.heading h2{font-size:17px;margin:0}.muted{color:var(--muted);font-size:12px}
+.primary{width:100%;padding:15px;border-radius:13px;background:var(--green);color:#091006;font-weight:900}.secondary{padding:10px 12px;border-radius:10px;background:#182018;color:var(--green);font-weight:800}
+.form{display:grid;gap:13px}.field label{display:block;color:#b8c0b8;font-size:12px;font-weight:700;margin-bottom:7px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:8px}.types button{padding:13px;border-radius:12px;background:#0b100c;color:var(--muted);border:1px solid var(--line);font-weight:800}.types button.active{color:var(--green);border-color:var(--green);background:#17200e}
+.item{padding:14px;margin-bottom:10px}.itemtop{display:flex;justify-content:space-between;gap:10px}.badge{padding:5px 8px;border-radius:20px;background:#18220d;color:var(--green);font-size:10px;font-weight:900}.badge.sat{background:#281b0d;color:var(--orange)}.meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-top:8px}.bonus{color:var(--orange);font-weight:900;margin-top:9px}.empty{text-align:center;padding:35px 12px;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+nav{position:fixed;left:0;right:0;bottom:0;background:rgba(7,10,8,.96);border-top:1px solid var(--line);padding:8px 12px calc(8px + env(safe-area-inset-bottom));z-index:5}.nav{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.nav button{background:none;color:#727c73;border-radius:11px;padding:7px;font-size:11px;font-weight:800}.nav button b{display:block;font-size:20px}.nav button.active{color:var(--green);background:#10170d}
+@media(min-width:600px){.stats{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo">DR</div><div><div class="title">DiveLog Pro</div><div class="sub">Commercial Diving Day Rate</div></div></header>
+
+<section id="home" class="page active">
+<div class="hero"><div class="eyebrow">COMMERCIAL DIVING LOG</div><h1>Work. Log. Earn.</h1><p>Keep your diving days, saturation time and bonus earnings in one place.</p>
+<div class="rat">
+<svg viewBox="0 0 100 100"><circle cx="52" cy="56" r="29" fill="#7b847c"/><circle cx="30" cy="30" r="13" fill="#8e978f"/><circle cx="75" cy="31" r="13" fill="#8e978f"/><circle cx="30" cy="30" r="6" fill="#333a34"/><circle cx="75" cy="31" r="6" fill="#333a34"/><circle cx="43" cy="52" r="4" fill="#080b08"/><circle cx="63" cy="52" r="4" fill="#080b08"/><ellipse cx="53" cy="67" rx="13" ry="8" fill="#596159"/><path d="M42 73q11 9 23 0" fill="none" stroke="#dce2dc" stroke-width="3"/><path d="M30 18q-1-13 10-12" fill="none" stroke="#b8ff00" stroke-width="3"/><circle cx="31" cy="17" r="4" fill="#b8ff00"/><path d="M31 39q22-22 47 0l-3 11q-22-13-41 0z" fill="#1e251f" stroke="#b8ff00" stroke-width="3"/><rect x="36" y="30" width="38" height="16" rx="7" fill="#0c120d" stroke="#ff7900" stroke-width="2"/></svg>
+<div><strong>DIVER RAT</strong><span>Log the graft. Keep the numbers. Know what you're owed.</span></div></div></div>
+<div class="stats">
+<div class="card"><div class="label">Contract Days</div><div class="value"><span id="used">0</span><small class="muted"> / 132</small></div><div class="bar"><i id="daybar"></i></div></div>
+<div class="card"><div class="label">Days Remaining</div><div class="value green" id="remaining">132</div></div>
+<div class="card"><div class="label">Sat Hours</div><div class="value"><span id="sathours">0</span><small class="muted"> / 1,896h</small></div><div class="bar"><i id="satbar"></i></div></div>
+<div class="card"><div class="label">Bonus Earned</div><div class="value orange" id="bonusTotal">£0</div></div>
+</div>
+<div class="heading"><h2>Quick add</h2><span class="muted" id="count">0 trips</span></div>
+<button class="primary" onclick="page('add')">＋ Add Trip</button>
+</section>
+
+<section id="add" class="page">
+<div class="heading"><h2>Add Trip</h2><span class="muted">Save to history</span></div>
+<div class="card" style="padding:16px"><form class="form" onsubmit="saveTrip(event)">
+<div class="field"><label>Trip / Job name</label><input id="job" required placeholder="e.g. North Sea Campaign"></div>
+<div class="row"><div class="field"><label>Date</label><input id="date" type="date" required></div><div class="field"><label>Day rate (£)</label><input id="rate" type="number" min="0" step=".01" placeholder="0"></div></div>
+<div class="field"><label>Trip type</label><div class="types"><button id="air" type="button" class="active" onclick="typeSet('air')">AIR / DECK</button><button id="sat" type="button" onclick="typeSet('sat')">SATURATION</button></div></div>
+<div class="row"><div class="field"><label>Contract days</label><input id="days" type="number" min="0" step=".5" value="1"></div><div class="field"><label>Bonus earned (£)</label><input id="bonus" type="number" min="0" step=".01" value="0"></div></div>
+<div id="satbox" style="display:none"><div class="row"><div class="field"><label>Saturation days</label><input id="satdays" type="number" min="0" step=".5" value="0"></div><div class="field"><label>Saturation hours</label><input id="sath" type="number" min="0" step=".5" value="0"></div></div></div>
+<button class="primary" type="submit">Save Trip</button>
+</form></div>
+</section>
+
+<section id="history" class="page">
+<div class="heading"><h2>History</h2><button class="secondary" onclick="clearAll()">Clear all</button></div><div id="list"></div>
+</section>
+</div>
+<nav><div class="nav"><button class="active" data-p="home" onclick="page('home')"><b>⌂</b>Home</button><button data-p="add" onclick="page('add')"><b>＋</b>Add Trip</button><button data-p="history" onclick="page('history')"><b>▤</b>History</button></div></nav>
+
+<script>
+const K='divelog-pro-v2';let trips=JSON.parse(localStorage.getItem(K)||'[]'),kind='air';
+const £=n=>new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(Number(n)||0);
+function page(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.p===p));if(p==='home')home();if(p==='history')history();scrollTo(0,0)}
+function typeSet(x){kind=x;air.classList.toggle('active',x==='air');sat.classList.toggle('active',x==='sat');satbox.style.display=x==='sat'?'block':'none'}
+function saveTrip(e){e.preventDefault();trips.unshift({id:Date.now(),job:job.value.trim(),date:date.value,rate:+rate.value||0,days:+days.value||0,bonus:+bonus.value||0,type:kind,satdays:kind==='sat'?+satdays.value||0:0,sath:kind==='sat'?+sath.value||0:0});localStorage.setItem(K,JSON.stringify(trips));e.target.reset();date.value=new Date().toISOString().slice(0,10);days.value=1;bonus.value=0;satdays.value=0;sath.value=0;typeSet('air');page('history')}
+function home(){let d=trips.reduce((a,x)=>a+x.days,0),h=trips.reduce((a,x)=>a+x.sath,0),b=trips.reduce((a,x)=>a+x.bonus,0);used.textContent=d.toLocaleString('en-GB');remaining.textContent=Math.max(0,132-d).toLocaleString('en-GB');sathours.textContent=h.toLocaleString('en-GB');bonusTotal.textContent=£(b);daybar.style.width=Math.min(100,d/132*100)+'%';satbar.style.width=Math.min(100,h/1896*100)+'%';count.textContent=trips.length+' '+(trips.length===1?'trip':'trips')}
+function history(){list.innerHTML=trips.length?trips.map(x=>'<div class="item"><div class="itemtop"><strong>'+esc(x.job)+'</strong><span class="badge '+(x.type==='sat'?'sat':'')+'">'+(x.type==='sat'?'SATURATION':'AIR / DECK')+'</span></div><div class="meta"><span>'+fmt(x.date)+'</span><span>'+x.days+' contract day'+(x.days==1?'':'s')+'</span>'+(x.type==='sat'?'<span>'+x.sath+' sat hours</span>':'')+'</div><div class="meta"><span>Day rate: '+£(x.rate)+'</span></div><div class="bonus">Bonus: '+£(x.bonus)+'</div><div style="text-align:right;margin-top:9px"><button class="secondary" onclick="del('+x.id+')">Delete</button></div></div>').join(''):'<div class="empty">No trips saved yet.<br><br>Add your first diving trip.</div>'}
+function del(id){trips=trips.filter(x=>x.id!==id);localStorage.setItem(K,JSON.stringify(trips));history();home()}
+function clearAll(){if(confirm('Delete all saved trips?')){trips=[];localStorage.setItem(K,'[]');history();home()}}
+function fmt(d){return d?new Date(d+'T12:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'No date'}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+date.value=new Date().toISOString().slice(0,10);home();
+</script>
+</body>
+</html>
